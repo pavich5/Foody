@@ -23,21 +23,23 @@ const BurgersMenu = () => {
     });
   };
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const pageHeight = document.documentElement.scrollHeight;
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
 
-      if (pageHeight - scrollPosition <= 400) {
-        setShowIcons(true);  
-      } else {
-        setShowIcons(false);  
-      }
-    };
+        if (pageHeight - scrollPosition <= 400) {
+          setShowIcons(true);  
+        } else {
+          setShowIcons(false);  
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
