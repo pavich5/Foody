@@ -1,0 +1,115 @@
+.helpPage {
+  padding: 24px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heroSection {
+  text-align: center;
+  width: 50vw;
+}
+
+.heroSection h1 {
+  font-size: 2rem;
+  color: rgba(0, 123, 85, 1);
+  margin-bottom: 16px;
+}
+
+.faqSection {
+  margin-bottom: 48px;
+  width: 50vw;
+}
+
+.faqSection h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.visualGuides {
+  margin-bottom: 48px;
+}
+
+.visualGuides h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.contactForm {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 48px;
+  width: 50vw;
+}
+
+.contactForm h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.deliveryMap {
+  margin-bottom: 48px;
+}
+
+.deliveryMap h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.footerCTA {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.footerCTA .ant-btn {
+  font-size: 1rem;
+  padding: 8px 24px;
+}
+.contactUsSection {
+  margin-top: 4px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contactUsSection h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contactButtons button {
+  margin: 8px;
+}
+
+@media (max-width: 768px) {
+  .footerCTA {
+    flex-direction: column;
+    align-items: center;
+  }
+  .faqSection {
+    width: 90vw;
+  }
+  .contactForm {
+    width: 90vw;
+  }
+  .heroSection {
+    width: 90vw;
+  }
+  .footerCTA .ant-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,81 @@
+.cartDrawer {
+  background-color: #f9f9f9;
+}
+
+.cartList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.cartItem:hover {
+  background-color: rgba(0, 123, 85, 0.1);
+}
+
+.itemDetails {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.itemImage {
+  border: 2px solid rgba(0, 123, 85, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.itemImage:hover {
+  transform: scale(1.1);
+}
+
+.itemTitle {
+  font-size: 16px;
+  color: #333;
+}
+
+.itemDescription {
+  font-size: 14px;
+  color: #666;
+}
+
+.itemCalories {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.itemPrice {
+  font-size: 16px;
+  color: rgba(0, 123, 85, 1);
+  margin-top: 10px;
+}
+
+.clearButton {
+  margin-top: 20px;
+  background-color: rgba(0, 123, 85, 1);
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.clearButton:hover {
+  background-color: rgba(0, 123, 85, 0.8);
+}
+
+.emptyCartText {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 20px;
+}
+.ant-list-item-action{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

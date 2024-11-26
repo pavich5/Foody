@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Example fallback font */
+
+:root {
+  /* Base Colors */
+  --background: #ffffff; /* Light background */
+  --foreground: #171717; /* Dark foreground */
+
+  /* Shake Shack Colors */
+  --shake-green: #78be20; /* Primary green color */
+  --shake-dark-green: #4c730f; /* Darker green */
+  --shake-light-gray: #f4f4f4; /* Light gray */
+  --shake-dark-gray: #4a4a4a; /* Dark gray */
+  --shake-black: #0a0a0a; /* Black */
+  --shake-white: #ffffff; /* White */
+
+  /* Fonts */
+  --font-primary: 'GT America', Arial, Helvetica, sans-serif; /* Primary font */
+  --font-secondary: 'Roboto', Arial, sans-serif; /* Secondary font for accessibility */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--shake-black);
+    --foreground: var(--shake-light-gray);
+  }
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+a {
+  color: var(--shake-green);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--shake-dark-green);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+}
+
+p, span, label, input, button {
+  font-family: var(--font-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

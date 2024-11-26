@@ -1,0 +1,126 @@
+.reviewsPage {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heroSection h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviewsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.reviewsList .ant-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  max-width: 280px; 
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviewsList .ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.reviewsList .ratingStars {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ratingStars{
+  margin-top: 5px;
+}
+
+.reviewsList .reviewDate {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.addReview {
+  min-width: 50vw;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.addReview h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.addReview .ant-form-item-label {
+  font-weight: 600;
+}
+
+.addReview .ant-input,
+.addReview .ant-input-textarea {
+  border-radius: 8px;
+}
+
+.addReview .ant-btn {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00bfae;
+  color: white;
+  font-weight: bold;
+}
+
+.addReview .ant-btn:hover {
+  background-color: #008f87;
+}
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .reviewsList {
+    grid-template-columns: 1fr;
+  }
+  .addReview{
+    min-width: 90vw;
+  }
+  .reviewCard{
+    min-width: 90vw;
+  }
+}

@@ -1,0 +1,195 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 120px;
+  height: 100px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 24px;
+  margin-right: 20px;
+}
+
+.pickup {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.pickup span {
+  color: gray;
+}
+
+.pickupLocation {
+  text-decoration: underline;
+  color: black;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLinks div {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+.icon {
+  color: black;
+}
+
+.signInButton {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 16px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: white;
+}
+
+.signInButton:hover {
+  background-color: #444;
+}
+
+.navLinks div:hover {
+  cursor: pointer;
+  color: var(--shake-green);
+}
+
+.iconButton:hover {
+  background-color: var(--shake-light-gray);
+  color: var(--shake-green);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signInButton:hover {
+  background-color: var(--shake-dark-green);
+  color: var(--shake-white);
+  border-color: var(--shake-dark-green);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.pickupLocation:hover {
+  color: var(--shake-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.logoSectionMobile{
+  display: none;
+}
+.iconButtonCart {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon {
+  font-size: 24px;
+  color: #007B55;
+}
+
+.iconButtonCart::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -5px; 
+  right: -10px;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 0 15px;
+  }
+
+  .logoSection {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-right: 15px;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000;
+    height: 80px;
+    background-color: white;
+  }
+  .header{
+    height: 80px;
+  }
+  .pickup{
+    margin-left: 0;
+  }
+  
+  .logoSection{
+    display: none;
+  }
+  .logoSectionMobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+}
+

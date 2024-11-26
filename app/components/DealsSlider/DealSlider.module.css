@@ -1,0 +1,113 @@
+.sliderContainer {
+  max-width: 100%;
+  position: relative;
+}
+
+.sliderItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sliderImage {
+  width: 100%;
+  height: 73vh;
+  object-fit: cover;
+}
+
+.sliderContent {
+  position: absolute;
+  top: 47%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 33px 22px 25px;
+  max-width: 33vw;
+  height: auto;
+}
+
+.sliderContent h1 {
+  font-size: 60px;
+  line-height: 72px;
+  margin-bottom: -6px;
+}
+
+.sliderContent p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.customArrowLeft,
+.customArrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.sliderContainer:hover .customArrowLeft,
+.sliderContainer:hover .customArrowRight {
+  opacity: 1;
+  visibility: visible;
+}
+
+.customArrowLeft {
+  left: 10px;
+}
+
+.customArrowRight {
+  right: 10px;
+}
+
+.customArrowLeft svg,
+.customArrowRight svg {
+  color: black;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .sliderContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 33px 22px 25px;
+    min-width: 95vw;
+  }
+  .sliderContent h1 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 15px;
+  }
+
+  .sliderContent p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .customArrowLeft,
+  .customArrowRight {
+    padding: 8px;
+  }
+
+  .customArrowLeft svg,
+  .customArrowRight svg {
+    font-size: 20px;
+  }
+
+  .sliderImage {
+    height: 55vh;
+  }
+}

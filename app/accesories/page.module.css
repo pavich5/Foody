@@ -1,0 +1,26 @@
+.accessoriesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vw;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .accessoriesContainer {
+      max-width: 90vw;
+    }
+  
+    .cardImage {
+      height: 90vw; 
+    }
+  }
+  
