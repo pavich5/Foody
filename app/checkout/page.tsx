@@ -17,9 +17,6 @@ import {
 } from "antd";
 import { useCart } from "../context/CartContext";
 import { IoRemoveCircleOutline } from "react-icons/io5";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { LatLngExpression } from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 const { Title, Text } = Typography;
 
@@ -27,11 +24,7 @@ const CheckoutPage = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
   const [deliveryMethod, setDeliveryMethod] = useState("home");
   const [form] = Form.useForm();
-  const [isMapVisible, setIsMapVisible] = useState(false);
   const [selectedAddress, setSelectedAddress] = useState("");
-  const [markerPosition, setMarkerPosition] = useState<LatLngExpression | null>(
-    null
-  );
   const [isOrderPlaced, setIsOrderPlaced] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [promoCode, setPromoCode] = useState("");
@@ -251,9 +244,6 @@ const CheckoutPage = () => {
                 placeholder="Enter your delivery address"
                 disabled={deliveryMethod !== "home"}
                 value={selectedAddress}
-                onClick={() =>
-                  deliveryMethod === "home" && setIsMapVisible(true)
-                }
               />
             </Form.Item>
             <Form.Item label="Promo Code">
@@ -329,28 +319,6 @@ const CheckoutPage = () => {
         </Button>
       </Card>
 
-      <Modal
-        title="Select Your Location"
-        open={isMapVisible}
-        onCancel={() => setIsMapVisible(false)}
-        footer={null}
-        width={800}
-      >
-        <div style={{ height: "400px", width: "100%" }}>
-          <MapContainer
-            center={[40.7128, -74.006]}
-            zoom={10}
-            style={{ height: "100%", width: "100%" }}
-          >
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            {markerPosition && (
-              <Marker position={markerPosition}>
-                <Popup>{selectedAddress}</Popup>
-              </Marker>
-            )}
-          </MapContainer>
-        </div>
-      </Modal>
     </div>
   );
 };
