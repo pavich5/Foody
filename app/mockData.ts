@@ -2,6 +2,7 @@ export const categories = [
   {
     id: "burgers",
     title: "Burgers",
+    customizationOptions: ["Lettuce", "Tomato", "Pickles", "Cheese", "Bacon", "Onions", "Sauce"],
     description:
       "Our custom 100% Angus beef blend, never frozen, no hormones or antibiotics ever, humanely raised and grazed in the USA",
     items: [
@@ -37,6 +38,7 @@ export const categories = [
   {
     id: "chicken-burgers",
     title: "Chicken Burgers",
+    customizationOptions: ["Lettuce", "Tomato", "Pickles", "Cheese", "Bacon", "Onions", "Sauce"],
     description:
       "Delicious chicken burgers with crispy fried chicken and flavorful toppings.",
     items: [
@@ -75,6 +77,7 @@ export const categories = [
   {
     id: "fries",
     title: "Fries",
+    customizationOptions: ["Cheese", "Jalapeños", "Sour Cream", "Salsa", "Bacon"],
     description: "Golden, crispy fries with a variety of dipping sauces.",
     items: [
       {
@@ -111,6 +114,7 @@ export const categories = [
   {
     id: "iceCreams",
     title: "Ice Creams",
+    customizationOptions: ["Chocolate Syrup", "Sprinkles", "Whipped Cream", "Caramel Sauce"],
     description:
       "Our creamy, dreamy ice creams are the perfect way to end your meal.",
     items: [
@@ -145,6 +149,7 @@ export const categories = [
   },
   {
     id: "drinks",
+    customizationOptions: ["Extra Ice", "Lemon Wedge", "Sugar-Free Syrup"],
     title: "Drinks",
     description: "Refresh yourself with our delicious drinks menu.",
     items: [

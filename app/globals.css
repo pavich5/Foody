@@ -18,17 +18,7 @@
   --font-secondary: 'Roboto', Arial, sans-serif; /* Secondary font for accessibility */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--shake-black);
-    --foreground: var(--shake-light-gray);
-  }
-}
-
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

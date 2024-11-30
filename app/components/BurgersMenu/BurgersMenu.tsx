@@ -6,9 +6,11 @@ import { useState, useRef, useEffect } from "react";
 import { IoBeerOutline, IoIceCreamOutline } from "react-icons/io5";
 import { MdFastfood } from "react-icons/md";
 import { FaHamburger, FaDrumstickBite } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const BurgersMenu = () => {
   const { addToCart, openCartModal } = useCart();
+  const router = useRouter()
   const [activeCategory, setActiveCategory] = useState("burgers");
   const [showIcons, setShowIcons] = useState(true);
 
@@ -109,7 +111,7 @@ const BurgersMenu = () => {
                       {item.price} · {item.calories} cals
                     </p>
                     <div className={styles.itemButtons}>
-                      <button className={styles.customizeButton}>
+                      <button className={styles.customizeButton} onClick={()=> router.push(`/customize?id=${item.id}`)}>
                         Customize
                       </button>
                       <button
