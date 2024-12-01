@@ -1,7 +1,7 @@
 "use client";
 import { categories } from "@/app/mockData";
 import { useSearchParams } from "next/navigation";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, Suspense } from "react";
 import { Card, Checkbox, Input, Button, Divider, Image, message } from "antd";
 import { useCart } from "../context/CartContext";
 
@@ -142,4 +142,12 @@ const CustomizePage: React.FC = () => {
   );
 };
 
-export default CustomizePage;
+const CustomizePageWrapper: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CustomizePage />
+    </Suspense>
+  );
+};
+
+export default CustomizePageWrapper;
