@@ -48,7 +48,7 @@ const Header = () => {
         </div>
         <div className={styles.pickup}>
           <span>Burgers by</span>
-          <div className={styles.pickupLocation}>Pavic</div>
+          <div className={styles.pickupLocation}>Foody</div>
         </div>
       </div>
       <nav className={styles.navLinks}>
@@ -98,7 +98,7 @@ const Header = () => {
           </button>
           <div className={styles.pickup}>
             <span>Burgers by</span>
-            <div className={styles.pickupLocation}>Pavic</div>
+            <div className={styles.pickupLocation}>Foody</div>
           </div>
         </div>
         <div
