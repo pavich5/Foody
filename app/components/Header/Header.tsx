@@ -138,7 +138,7 @@ const Header = () => {
                 ></path>
               </svg>
               <p style={{ margin: 0, fontSize: "16px", fontWeight: "bold" }}>
-                Burgers by Pavic
+                Foody
               </p>
             </div>
           }

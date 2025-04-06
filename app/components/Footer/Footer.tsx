@@ -37,7 +37,7 @@ const Footer = () => {
           <li>Terms of Use</li>
           <li>Contact Us</li>
         </ul>
-        <p>©2024 Burgers by Pavic. All Rights Reserved.</p>
+        <p>©2024 Foody. All Rights Reserved.</p>
       </div>
     </footer>
   );
