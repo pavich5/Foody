@@ -65,8 +65,7 @@
 }
 
 .addReview {
-  min-width: 50vw;
-  margin: 0 auto;
+  min-width: 65vw;
   padding: 30px;
   background-color: #fff;
   border-radius: 8px;
