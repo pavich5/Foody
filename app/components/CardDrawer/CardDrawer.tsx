@@ -46,50 +46,59 @@ const CartDrawer = () => {
     >
       {cartItems.length > 0 ? (
         <>
-          <List
-            dataSource={cartItems}
-            renderItem={(item) => (
-              <List.Item
-                actions={[
-                  <div style={{ display: "flex" }}>
-                    <InputNumber
-                      min={1}
-                      max={50}
-                      value={item.quantity}
-                      onChange={(value) =>
-                        handleQuantityChange(value ?? 1, item.id)
-                      }
-                      style={{ width: 60 }}
-                    />
-                    ,
-                    <Button
-                      type="link"
-                      danger
-                      onClick={() => removeFromCart(item.id)}
-                    >
-                      <IoRemoveCircleOutline size={26} />
-                    </Button>
-                  </div>,
-                ]}
-              >
-                <List.Item.Meta
-                  avatar={<Avatar src={item.image} size={64} />}
-                  title={<Text strong>{item.title}</Text>}
-                  description={
-                    <>
-                      <Text>{item.description}</Text>
-                      <div>
-                        <Text style={{ marginRight: "10px" }} strong>
-                          {item.price}$
-                        </Text>
-                        <Text type="secondary">{item.calories}</Text>
-                      </div>
-                    </>
-                  }
-                />
-              </List.Item>
-            )}
+         <List
+  dataSource={cartItems}
+  renderItem={(item) => (
+    <List.Item>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          alignItems: "center", // Keep items in a row
+        }}
+      >
+        <div style={{ minWidth: "68%" }}>
+          <List.Item.Meta
+            avatar={<Avatar src={item.image} size={64} />}
+            title={<Text strong>{item.title}</Text>}
+            description={
+              <>
+                <Text>{item.description}</Text>
+                <div>
+                  <Text style={{ marginRight: "10px" }} strong>
+                    {item.price}$
+                  </Text>
+                  <Text type="secondary">{item.calories}</Text>
+                </div>
+              </>
+            }
           />
+        </div>
+        <div
+          style={{
+            width: "35%",
+            minWidth: "130px", // Ensure it's not too small on mobile
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+          }}
+        >
+          <InputNumber
+            min={1}
+            max={50}
+            value={item.quantity}
+            onChange={(value) => handleQuantityChange(value ?? 1, item.id)}
+            style={{ width: 60 }}
+          />
+          <Button type="link" danger onClick={() => removeFromCart(item.id)}>
+            <IoRemoveCircleOutline size={26} />
+          </Button>
+        </div>
+      </div>
+    </List.Item>
+  )}
+/>
+
           <div style={{ marginTop: 20 }}>
             <Text strong>Total Items: {cartItems.length}</Text>
             <br />

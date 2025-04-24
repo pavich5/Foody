@@ -83,42 +83,77 @@ const CheckoutPage = () => {
 
   if (isOrderPlaced) {
     return (
-      <Card title="Order Confirmation" bordered>
-        <section>
-          <Title level={4}>Order Summary</Title>
-          <p>
-            <strong>Order ID:</strong> #11312
-          </p>
-          <p>
-            <strong>Delivery Method:</strong>{" "}
-            {deliveryMethod === "home" ? "Home Delivery" : "Store Pickup"}
-          </p>
-          <p>
-            <strong>Delivery Time:</strong>{" "}
-            {form.getFieldValue("deliveryTime") || "Not selected"}
-          </p>
-          <Title level={5}>Cart Items:</Title>
-          <List
-            itemLayout="horizontal"
-            dataSource={cartItems}
-            renderItem={(item) => (
-              <List.Item>
-                <List.Item.Meta
-                  avatar={
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{ width: 60, height: 60, borderRadius: 5 }}
-                    />
-                  }
-                  title={item.title}
-                  description={item.price}
-                />
-              </List.Item>
-            )}
+      <Card
+  title="Order Confirmation"
+  bordered
+  style={{
+    borderRadius: "10px",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+  }}
+>
+  <section style={{ padding: "20px" }}>
+    <Title level={4} style={{ marginBottom: "20px", fontWeight: 600 }}>
+      Order Summary
+    </Title>
+
+    <p style={{ fontSize: "16px", margin: "10px 0" }}>
+      <strong>Order ID:</strong> <span style={{ fontWeight: 500 }}>#11312</span>
+    </p>
+    <p style={{ fontSize: "16px", margin: "10px 0" }}>
+      <strong>Delivery Method:</strong>{" "}
+      <span style={{ fontWeight: 500 }}>
+        {deliveryMethod === "home" ? "Home Delivery" : "Store Pickup"}
+      </span>
+    </p>
+    <p style={{ fontSize: "16px", margin: "10px 0" }}>
+      <strong>Delivery Time:</strong>{" "}
+      <span style={{ fontWeight: 500 }}>
+        {form.getFieldValue("deliveryTime") || "Not selected"}
+      </span>
+    </p>
+
+    <Title level={5} style={{ marginTop: "20px", fontWeight: 600 }}>
+      Cart Items:
+    </Title>
+
+    <List
+      itemLayout="horizontal"
+      dataSource={cartItems}
+      renderItem={(item) => (
+        <List.Item
+          style={{
+            padding: "10px 0",
+            borderBottom: "1px solid #f0f0f0",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <List.Item.Meta
+            avatar={
+              <img
+                src={item.image}
+                alt={item.title}
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: "8px",
+                  objectFit: "cover",
+                }}
+              />
+            }
+            title={
+              <span style={{ fontSize: "16px", fontWeight: 500 }}>{item.title}</span>
+            }
+            description={
+              <span style={{ fontSize: "14px", color: "#595959" }}>{item.price}</span>
+            }
           />
-        </section>
-      </Card>
+        </List.Item>
+      )}
+    />
+  </section>
+</Card>
+
     );
   }
   const deliveryCost = deliveryMethod === "home" ? 5 : 0;
